@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
+<html>
 
 <head>
   <title>กำลังเข้าสู่ Form</title>
   <style>
     .centerScreen {
-      margin-top: 20;
+      margin-top: 20px;
       margin-right: auto;
-      margin-bottom: 20;
+      margin-bottom: 20px;
       margin-left: auto;
     }
   </style>
@@ -16,59 +16,38 @@
 <body style="background-color: powderblue;">
   <div class="centerScreen">
     <center>
-      <img src="https://drive.google.com/uc?id=1mEyShWSX9rPf4klIDeMTlHAOc4BsySFK" height="200px" , width="200px" />
+      <img src="https://drive.google.com/uc?id=1mEyShWSX9rPf4klIDeMTlHAOc4BsySFK" height="200px" width="200px" />
       <h1>
         กำลังเข้าสู่ Google Form กรุณารอซักครู่
       </h1>
-       <img id="pictureUrl">
-  <p id="userId"><b>userId:</b> </p>
-  <p id="displayName"><b>displayName:</b> </p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
     </center>
   </div>
-</body>
-<footer>
-  
 
-
-
-  <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
-    /// Config Your LIFF ID Here
-
     async function getUserProfile() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("displayName").append(profile.displayName)
+      const profile = await liff.getProfile();
+      return profile;
     }
 
     async function main() {
-      await liff.init({ liffId: "1637622658-YbJmmRd3" })
-      document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-      if(liff.isLoggedIn()) {
-      getUserProfile()
+      await liff.init({ liffId: "1637622658-YbJmmRd3" });
+
+      if (liff.isLoggedIn()) {
+        const profile = await getUserProfile();
+        
+        // Construct the redirect URL with pre-filled data
+        const redirectUrl = `https://docs.google.com/forms/d/e/1FAIpQLSflGkaWUJ__ZjM26wt25lgbd0XLU4rkT2W1PWmtQGjSgI0TSw/viewform?usp=pp_url&entry.278756671=${profile.userId}&entry.770457370=${profile.displayName}&entry.2072450151=${profile.pictureUrl}&entry.881892284=${profile.statusMessage}`;
+        
+        // Redirect the user
+        window.location.replace(redirectUrl);
       } else {
-        liff.login()
+        liff.login();
       }
     }
 
-    /// Config Your LIFF ID Here
-    liff.ready
-      .then(() => {
-        if (liff.isLoggedIn()) {
-          return getUserProfile();
-        } else {
-          liff.login({
-            redirectUri: "https://liff.line.me/1637622658-YbJmmRd3",
-          });
-        }
-      })
-      .then((profile) => {
-        window.location.replace(
-          `https://docs.google.com/forms/d/e/1FAIpQLSflGkaWUJ__ZjM26wt25lgbd0XLU4rkT2W1PWmtQGjSgI0TSw/viewform?usp=pp_url&entry.278756671=${profile.userId}&entry.770457370=${profile.displayName}&entry.2072450151=${profile.pictureUrl}&entry.881892284=${profile.statusMessage}`
-        );
-      });
+    main();
   </script>
-</footer>
+</body>
+
+</html>
