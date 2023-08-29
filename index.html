@@ -27,7 +27,7 @@
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
   <script>
     /// Config Your LIFF ID Here
-    const liffId = "";
+    const liffId = "1637622658-YbJmmRd3";
     /// Config Your LIFF ID Here
     liff.ready
       .then(() => {
@@ -41,7 +41,7 @@
       })
       .then((profile) => {
         window.location.replace(
-          `Paste Google Form URL and map your parameters here`
+          `https://docs.google.com/forms/d/e/1FAIpQLSflGkaWUJ__ZjM26wt25lgbd0XLU4rkT2W1PWmtQGjSgI0TSw/viewform?usp=pp_url&entry.278756671=${profile.userId}&entry.770457370=${profile.displayName}&entry.2072450151=${profile.pictureUrl&entry.881892284=${profile.statusMessage}`
         );
       });
     liff.init(
