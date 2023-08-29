@@ -20,6 +20,10 @@
       <h1>
         กำลังเข้าสู่ Google Form กรุณารอซักครู่
       </h1>
+       <img id="pictureUrl">
+  <p id="userId"><b>userId:</b> </p>
+  <p id="displayName"><b>displayName:</b> </p>
+  <p id="statusMessage"><b>statusMessage:</b> </p>
     </center>
   </div>
 </body>
@@ -34,6 +38,10 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile()
+      document.getElementById("pictureUrl").src = profile.pictureUrl
+      document.getElementById("userId").append(profile.userId)
+      document.getElementById("statusMessage").append(profile.statusMessage)
+      document.getElementById("displayName").append(profile.displayName)
     }
 
     async function main() {
@@ -62,14 +70,5 @@
           `https://docs.google.com/forms/d/e/1FAIpQLSflGkaWUJ__ZjM26wt25lgbd0XLU4rkT2W1PWmtQGjSgI0TSw/viewform?usp=pp_url&entry.278756671=${profile.userId}&entry.770457370=${profile.displayName}&entry.2072450151=${profile.pictureUrl}&entry.881892284=${profile.statusMessage}`
         );
       });
-    liff.init(
-      {
-        liffId: liffId,
-      },
-      () => {},
-      (err) => {
-        window.alert(err);
-      }
-    );
   </script>
 </footer>
