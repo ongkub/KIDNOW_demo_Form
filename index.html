@@ -33,6 +33,7 @@
       .then(() => {
         if (liff.isLoggedIn()) {
           return liff.getProfile();
+          window.alert('Login');
         } else {
           liff.login({
             redirectUri: "https://liff.line.me/1637622658-YbJmmRd3",
