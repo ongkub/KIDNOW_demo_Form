@@ -37,7 +37,7 @@
         const profile = await getUserProfile();
         
         // Construct the redirect URL with pre-filled data
-        const redirectUrl = `https://docs.google.com/forms/d/e/1FAIpQLSflGkaWUJ__ZjM26wt25lgbd0XLU4rkT2W1PWmtQGjSgI0TSw/viewform?usp=pp_url&entry.278756671=${profile.userId}&entry.770457370=${profile.displayName}&entry.2072450151=${profile.pictureUrl}&entry.881892284=${profile.statusMessage}`;
+        const redirectUrl = `https://script.google.com/macros/s/AKfycbwInYCG1xXc2-GSBlA3wijurwgwJoKwLE31lvLf4gS6ibJfH1bTc6N7yHfsMbSMzhZE/exec?UID=${profile.userId}`;
         
         // Redirect the user
         window.location.replace(redirectUrl);
