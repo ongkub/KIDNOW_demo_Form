@@ -2,7 +2,9 @@
 <html>
 
 <head>
-  <title>กำลังเข้าสู่ Form</title>
+  <meta charset="utf-8" />
+  <title>เช็คคะแนนสะสม Kid NOW</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .centerScreen {
       margin-top: 20px;
@@ -13,16 +15,40 @@
   </style>
 </head>
 
-<body style="background-color: #ffd1fa;">
+<body style="background-color: #EEECED;">
   <div class="centerScreen">
     <center>
-      <img src="https://raw.githubusercontent.com/ongkub/KIDNOW_demo_Form/5226b480a00cf095f87d02f7b60d36b47d9959f5/images/KidNow.png" height="200px" width="200px" />
-      <h1>
-        คุณกำลังเข้าสู่ระบบ กรุณารอซักครู่
-      </h1>
+      <img
+        src="https://raw.githubusercontent.com/ongkub/KIDNOW_demo_Form/5226b480a00cf095f87d02f7b60d36b47d9959f5/images/KidNow.png"
+        height="200px" width="200px" />
+      <div>
+        <h1>
+          เช็คคะแนนสะสม
+        </h1>
+      </div>
+      <div class="container">
+        <div class="progress2 progress-moved">
+          <div class="progress-bar2">
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          Now Loading…
+        </p>
+      </div>
+
     </center>
   </div>
 
+  <div>
+    <div class="circleTopLeft">
+    </div>
+  </div>
+  <div>
+    <div class="circleBottomRight">
+    </div>
+  </div>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.21.0/sdk.js"></script>
   <script>
     async function getUserProfile() {
@@ -35,10 +61,10 @@
 
       if (liff.isLoggedIn()) {
         const profile = await getUserProfile();
-        
+
         // Construct the redirect URL with pre-filled data
         const redirectUrl = `https://script.google.com/macros/s/AKfycbwInYCG1xXc2-GSBlA3wijurwgwJoKwLE31lvLf4gS6ibJfH1bTc6N7yHfsMbSMzhZE/exec?UID=${profile.userId}`;
-        
+
         // Redirect the user
         window.location.replace(redirectUrl);
       } else {
