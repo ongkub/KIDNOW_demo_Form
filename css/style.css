@@ -128,8 +128,8 @@ background: #F0D9E9;
   width: 200px;
   height: 200px;
   overflow: hidden;
-  right: 0;
-  bottom: 0;
+  right: 0px;
+  bottom: 0px;
 }
 
 .circleBottomRight{
