@@ -129,6 +129,7 @@ background: #F0D9E9;
   height: 200px;
   overflow: hidden;
   right: 0;
+  bottom : 0;
 }
 
 .circleBottomRight{
