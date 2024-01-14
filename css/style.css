@@ -137,14 +137,11 @@ background: #F0D9E9;
 
 }
 .lastUpdate{
-  /* คะแนนปัจจุบันของท่านได้รับการอัปเดต ณ วันที่ 15 กุมภาพันธ์ 2567 เวลา 12.00 น. */
-
 font-family: 'Kanit';
 font-style: normal;
 font-weight: 400;
 font-size: 13px;
-line-height: 18px;
-/* or 138% */
+line-height: 138%;
 text-align: center;
 color: #000000;
 }
