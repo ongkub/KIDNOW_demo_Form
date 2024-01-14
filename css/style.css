@@ -137,12 +137,11 @@ background: #F0D9E9;
 
 }
 .lastUpdate p{
-font-family: 'Kanit';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 138%;
-text-align: center;
-color: #000000;
+font-style: normal !important;
+font-weight: 400 !important;
+font-size: 13px !important;
+line-height: 138% !important;
+text-align: center !important;
+color: #000000 !important;
 }
 
