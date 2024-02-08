@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-<body style="display:flex;position:relative;margin:0; justify-content: center;">
+<html><head>
+<meta name="chromevox" content-script="no">
+<title>ระบบตรวจสอบคะแนน Kids Now</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" nonce=""><link rel="stylesheet" href="/static/macros/client/css/3057681068-mae_html_css_ltr.css">
+<script type="text/javascript" src="/static/macros/client/js/2643123624-warden_bin_i18n_warden.js" nonce=""></script>
+</head>
+<body>
+<table id="warning-bar-table" class="full_size" cellspacing="0" cellpadding="0"><tbody><tr><td></td></tr><tr><td style="height: 100%"><iframe id="sandboxFrame" title="ระบบตรวจสอบคะแนน Kids Now" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" src="https://n-nmkf7akpfk5soaqifxgtlagjbpplb7mkkwdknna-0lu-script.googleusercontent.com/userCodeAppPanel">
+</iframe>
+</td></tr></tbody></table><script nonce="">
+(function() {
+var el = document.getElementById('sandboxFrame');
+el.onload = function() {
+goog.script.init("\x7b\x22functionNames\x22:\x5b\x22doGet\x22,\x22getCode\x22\x5d,\x22sandboxMode\x22:\x22IFRAME_SANDBOX\x22,\x22callbackTimeout\x22:390000,\x22deploymentId\x22:\x22AKfycbwInYCG1xXc2-GSBlA3wijurwgwJoKwLE31lvLf4gS6ibJfH1bTc6N7yHfsMbSMzhZE\x22,\x22eei\x22:\x22\x22,\x22sandboxHost\x22:\x22https:\/\/n-nmkf7akpfk5soaqifxgtlagjbpplb7mkkwdknna-0lu-script.googleusercontent.com\x22,\x22clientSideProperties\x22:\x7b\x22google.script.sandbox.mode\x22:\x22IFRAME_SANDBOX\x22,\x22google.script.host.origin\x22:\x22https:\/\/docs.google.com\x22\x7d,\x22actionPrefix\x22:\x22\/macros\/s\/AKfycbwInYCG1xXc2-GSBlA3wijurwgwJoKwLE31lvLf4gS6ibJfH1bTc6N7yHfsMbSMzhZE\x22,\x22userHtml\x22:\x22\x3c!DOCTYPE html\x3e\\n\x3chtml lang\x3d\\\x22en\\\x22\x3e\\n\\n\x3chead\x3e\\n   \x3ctitle\x3eระบบตรวจสอบคะแนน Kids Now\x3c\\\/title\x3e\\n   \x3clink rel\x3d\\\x22stylesheet\\\x22 href\x3d\\\x22https:\/\/ongkub.github.io\/KIDNOW_demo_Form\/css\/style.css\\\x22\x3e\\n    \x3cbase target\x3d\\\x22_top\\\x22\x3e\\n    \x3cstyle\x3e\\n    .centerScreen \x7b\\n      margin-top: 15%;\\n      margin-right: auto;\\n      margin-bottom: 0px;\\n      margin-left: auto;\\n    \x7d\\n    \x3c\\\/style\x3e\\n\x3c\\\/head\x3e\\n\\n\\n\x3cbody style\x3d\\\x22background-color: #EEECED;\\\x22\x3e\\n    \\n    \x3cdiv class\x3d\\\x22centerScreen\\\x22\x3e\\n    \x3ccenter\x3e\\n       \x3cimg\\n        src\x3d\\\x22https:\/\/raw.githubusercontent.com\/ongkub\/KIDNOW_demo_Form\/main\/images\/KidNowOfficialrev2.png\\\x22\\n        width\x3d\\\x22400px\\\x22 \/\x3e\\n    \x3cdiv\x3e  \\n      \x3ch1\x3e\\n        ตรวจสอบคะแนนสะสม\\n      \x3c\\\/h1\x3e\\n      \\n      \x3cdiv\x3e\\n        \x3cp id\x3d\\\x22profileName\\\x22\x3eกรุณารอซักครู่\x3c\\\/p\x3e \\n      \x3c\\\/div\x3e  \\n\\n       \\n      \\n      \x3cdiv\x3e\\n        \x3cp class\x3d\\\x22lastUpdate\\\x22\x3eอัปเดต ณ วันที่ 31 มกราคม 2567 เวลา 12.00 น.\x3c\\\/p\x3e \\n      \x3c\\\/div\x3e  \\n\\n\\n       \\n      \x3c\\\/center\x3e\\n    \x3c\\\/div\x3e\\n    \x3c\\\/div\x3e\\n    \\n    \x3cdiv\x3e\\n    \x3cdiv class\x3d\\\x22circleTopLeft\\\x22\x3e\\n    \x3c\\\/div\x3e\\n  \x3c\\\/div\x3e\\n  \x3cdiv class\x3d\\\x22bottomRight\\\x22\x3e\\n    \x3cdiv class\x3d\\\x22circleBottomRight\\\x22\x3e\\n    \x3c\\\/div\x3e\\n  \x3c\\\/div\x3e\\n\\n    \x3cscript\x3e\\n        var LINEID;\\n        google.script.url.getLocation(function (location) \x7b\\n            console.log(location.parameters);\\n            const UIDDisplay \x3d location.parameters.UID;\\n            console.log(UIDDisplay\x5b0\x5d);\\n            console.log(typeof UIDDisplay\x5b0\x5d);\\n            console.log(UIDDisplay\x5b0\x5d.length);\\n            LINEID \x3d UIDDisplay\x5b0\x5d;\\n            console.log(typeof LINEID);\\n            findCode(LINEID);\\n        \x7d);\\n\\n        function findCode(A) \x7b\\n            console.log(A.length);\\n            var code \x3d A;\\n            console.log(\\\x22code is\\\x22 + code.length);\\n            if (code.length \x3d\x3d\x3d 33) \x7b\\n                google.script.run.withSuccessHandler(updateData).getCode(code);\\n            \x7d\\n        \x7d\\n\\n        function updateData(data) \x7b\\n            document.getElementById(\\\x22profileName\\\x22).innerHTML \x3d data;\\n            M.updateTextFields(); \\n        \x7d\\n    \x3c\\\/script\x3e\\n\\n\\n\x3c\\\/body\x3e\\n\\n\x3c\\\/html\x3e\x22,\x22ncc\x22:\x22\x7b\\\x22awhs\\\x22:true\x7d\x22\x7d", "AJuLMu1R0wt3-9QlCG2mdBe_-dfTx4bGYQ:1707398655663", undefined, true , true  , "true", "https:\/\/n-nmkf7akpfk5soaqifxgtlagjbpplb7mkkwdknna-0lu-script.googleusercontent.com", "\/\/drive.google.com\/abuse?id\x3dAKkXjoz0HdKajdshuoCqEc8PcgZsIfUUA3tf-TP8WzvuYOMtjMZzMbl-sclSfo7YEDLK6tX45aoaZ1AJCwDu9NsEQCgX_4DtgFx7ZljZ%3A0");}
+el.src = 'https:\/\/n-nmkf7akpfk5soaqifxgtlagjbpplb7mkkwdknna-0lu-script.googleusercontent.com\/userCodeAppPanel';
+}());
+</script>
 
 
-<div align="center">
-<iframe src="https://script.google.com/macros/s/AKfycbwInYCG1xXc2-GSBlA3wijurwgwJoKwLE31lvLf4gS6ibJfH1bTc6N7yHfsMbSMzhZE/exec" width = 100% style="border:none;" title="ระบบแจ้งเกรดออนไลน์"></iframe>
-<div>
-</body>
-</html>
+</body></html>
