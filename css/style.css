@@ -2,15 +2,18 @@
 
 body {
     font-family: Kanit !important;
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;    /* จัดกลางแนวตั้ง */
+    min-height: 100vh;      /* ทำให้ body สูงเต็มหน้าจอ */
+    margin: 0;              /* ลบระยะขอบเริ่มต้นของ body */
 }
 
-/* [เพิ่ม] โค้ดสำหรับจัดโลโก้ให้อยู่กลาง */
-.centerScreen img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px; 
+.centerScreen {
+    text-align: center; /* จัดของข้างในให้อยู่กลาง */
 }
+
+/* ส่วนที่เหลือของโค้ดเหมือนเดิม */
 
 button {
     display: block;
@@ -23,17 +26,6 @@ button {
     display: block;
     margin: 0 auto;
     width: 12%;
-    display: -moz-box;
-    display: -webkit-box;
-    display: box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    box-pack: center;
-    box-align: center;
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
     border-radius: 100px;
 }
 
@@ -43,7 +35,6 @@ button {
 }
 
 .centerScreen h1 {
-    /* ...โค้ดเดิม... */
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 600;
@@ -54,7 +45,6 @@ button {
 }
 
 .centerScreen p {
-    /* ...โค้ดเดิม... */
     font-family: 'Kanit';
     font-style: normal;
     font-weight: 600;
@@ -65,13 +55,12 @@ button {
 }
 
 .container {
-    margin: 50px auto;
+    margin: 50px auto; 
     width: 500px;
     text-align: center;
 }
 
 .progress2 {
-    /* ...โค้ดเดิม... */
     padding: 6px;
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.25);  
@@ -79,7 +68,6 @@ button {
 }
 
 .progress-bar2 {
-    /* ...โค้ดเดิม... */
     height: 30px;
     border-radius: 30px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
@@ -99,7 +87,6 @@ button {
 }
 
 .circleTopLeft {
-    /* ...โค้ดเดิม... */
     position: absolute;
     width: 200px;
     height: 200px;
@@ -111,7 +98,6 @@ button {
 }
 
 .bottomRight {
-    /* ...โค้ดเดิม... */
     position: absolute;
     width: 200px;
     height: 200px;
@@ -121,7 +107,6 @@ button {
 }
 
 .circleBottomRight {
-    /* ...โค้ดเดิม... */
     position: absolute;
     width: 400px;
     height: 400px;
@@ -133,7 +118,6 @@ button {
 }
 
 .lastUpdate {
-    /* ...โค้ดเดิม... */
     font-style: normal !important;
     font-weight: 400 !important;
     font-size: 25px !important;
