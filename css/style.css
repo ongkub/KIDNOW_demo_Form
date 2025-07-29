@@ -9,39 +9,14 @@ body {
     margin: 0;
 }
 
-/* [แก้ไข] ทำให้ .centerScreen เป็น Flex Container ด้วย */
 .centerScreen {
     display: flex;
-    flex-direction: column; /* จัดเรียงของข้างในในแนวตั้ง */
-    align-items: center;    /* จัดของข้างในทั้งหมดให้อยู่กลางแนวนอน */
-    text-align: center;     /* คงไว้สำหรับจัดกลางตัวหนังสือใน p และ h1 */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-button {
-    display: block;
-    padding: 8px 0;
-    margin: 8px auto;
-}
-
-#close-btn {
-  background-color: #EF476F;
-  color: white;
-  font-family: 'Kanit', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 30px;
-  padding: 12px 24px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: auto;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-#close-btn:hover {
-  background-color: #D83A5F; 
-}
+/* [ลบ] สไตล์ของ button และ #close-btn ถูกนำออกไปทั้งหมด */
 
 .centerScreen h1 {
     font-family: 'Kanit';
