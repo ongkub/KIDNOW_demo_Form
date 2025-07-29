@@ -3,35 +3,44 @@
 body {
     font-family: Kanit !important;
     display: flex;
-    justify-content: center; /* จัดกลางแนวนอน */
-    align-items: center;    /* จัดกลางแนวตั้ง */
-    min-height: 100vh;      /* ทำให้ body สูงเต็มหน้าจอ */
-    margin: 0;              /* ลบระยะขอบเริ่มต้นของ body */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
+/* [แก้ไข] ทำให้ .centerScreen เป็น Flex Container ด้วย */
 .centerScreen {
-    text-align: center; /* จัดของข้างในให้อยู่กลาง */
+    display: flex;
+    flex-direction: column; /* จัดเรียงของข้างในในแนวตั้ง */
+    align-items: center;    /* จัดของข้างในทั้งหมดให้อยู่กลางแนวนอน */
+    text-align: center;     /* คงไว้สำหรับจัดกลางตัวหนังสือใน p และ h1 */
 }
-
-/* ส่วนที่เหลือของโค้ดเหมือนเดิม */
 
 button {
     display: block;
-    width: 100%;
     padding: 8px 0;
     margin: 8px auto;
 }
 
-#pictureUrl {
-    display: block;
-    margin: 0 auto;
-    width: 12%;
-    border-radius: 100px;
+#close-btn {
+  background-color: #EF476F;
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: auto;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-#accessToken, #utouId {
-    display: block;
-    overflow: auto;
+#close-btn:hover {
+  background-color: #D83A5F; 
 }
 
 .centerScreen h1 {
@@ -115,14 +124,4 @@ button {
     border-radius: 400px;
     z-index: -1;
     background: #F0D9E9;
-}
-
-.lastUpdate {
-    font-style: normal !important;
-    font-weight: 400 !important;
-    font-size: 25px !important;
-    line-height: 138% !important;
-    text-align: center !important;
-    color: #000000 !important;
-    margin-top: 15%;
 }
